@@ -29,8 +29,8 @@ router.put("/event/:id", userController.auth, eventController.updateEvent);
 router.delete("/event/:id", userController.auth, eventController.deleteEvent);
 
 /** ---------------- Attendee Routes ---------------- */
-router.get("/attendees", attendeeController.getAttendees);
-router.get("/attendee/:id", attendeeController.getAttendeeById);
+router.get("/attendees", attendeeController.getAllAttendees);
+// router.get("/attendee/:id", attendeeController.getAttendeeById);
 router.post("/attendee", userController.auth, attendeeController.createAttendee);
 router.put("/attendee/:id", userController.auth, attendeeController.updateAttendee);
 router.delete("/attendee/:id", userController.auth, attendeeController.deleteAttendee);
@@ -43,14 +43,14 @@ router.put("/exhibitor/:id", userController.auth, exhibitorController.updateExhi
 router.delete("/exhibitor/:id", userController.auth, exhibitorController.deleteExhibitor);
 
 /** ---------------- Feedback Routes ---------------- */
-router.get("/feedbacks", feedbackController.getFeedbacks);
+router.get("/feedbacks", feedbackController.getAllFeedback);
 router.get("/feedback/:id", feedbackController.getFeedbackById);
 router.post("/feedback", userController.auth, feedbackController.createFeedback);
 router.put("/feedback/:id", userController.auth, feedbackController.updateFeedback);
 router.delete("/feedback/:id", userController.auth, feedbackController.deleteFeedback);
 
 /** ---------------- Notification Routes ---------------- */
-router.get("/notifications", notificationController.getNotifications);
+router.get("/notifications", notificationController.getAllNotifications);
 router.get("/notification/:id", notificationController.getNotificationById);
 router.post("/notification", userController.auth, notificationController.createNotification);
 router.put("/notification/:id", userController.auth, notificationController.updateNotification);

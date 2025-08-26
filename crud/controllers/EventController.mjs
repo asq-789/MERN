@@ -51,6 +51,7 @@ const EventController = {
   getEventById,
   updateEvent,
   deleteEvent,
+  getEvents,
 };
 
 export default EventController;
